@@ -1,20 +1,183 @@
-<div *ngIf="!comments">
-  <img src="https://media0.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy-preview.gif">
-</div>
-<div *ngIf="comments">
-  <ul>
-    <li *ngFor="let item of comments">
-      <h3>{{item.user.name}}</h3>
-      <p>{{item.text}}</p>
-      <div>
-        <ul>
-          <li *ngFor="let comment of item.comments">
-            <h4>{{comment.user.name}}</h4>
-            <p>{{comment.text}}</p>
-            <span>{{comment.date | date}}</span>
-          </li>
-        </ul>
+<div class="row ">
+  <div class="col-sm-12 margin-container">
+    <form>
+      <div class="form-group">
+        <label class="state-title" for="comment-user" data-toggle="modal" data-target="#comment-share modal-lg">Escribe aquí tu estado</label>
+        <textarea id="comment-user" class="form-control state-description" rows="2" data-toggle="modal" data-target="#publicar"></textarea>
       </div>
-    </li>
-  </ul>
+      <div class="text-right">
+        <button id="share" type="submit" class="btn btn-default state-button">Publicar</button>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="publicar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header no-border">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">X</span>
+              </button>
+            </div>
+            <div class="modal-body state-modal-body">
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="form-group">
+                    <label class="state-title" for="comment-user" data-toggle="modal" data-target="#comment-share modal-lg">Escribe aquí tu estado</label>
+                    <textarea id="comment-user" class="form-control state-description" rows="2" data-toggle="modal" data-target="#publicar"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-footer no-border">
+              <button type="button" class="btn btn-default state-button state-button-modal" data-dismiss="modal">Publicar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div *ngFor="let item of comments">
+  <section>
+    <article class="row ">
+      <div class="col-xs-12 post-container">
+        <div class="row">
+          <div class="col-xs-2 col-sm-1">
+            <figure>
+              <img src="assets/image/avatar.png" alt="">
+            </figure>
+          </div>
+          <div class="col-xs-10 col-sm-11">
+            <h4 class="post-username">{{item.user.name}}</h4>
+            <h6 class="post-date">{{item.date | date}}</h6>
+            <p class="post-content ">
+              {{item.text}}
+            </p>
+          </div>
+        </div>
+
+        <div class="row tCenter">
+          <div class="col-xs-6 col-sm-3 post-container-button reactions-mobile">
+            <a class="post-button " href="">Reaccionar</a>
+          </div>
+          <div id="reactions-mobile" class="col-xs-6 col-sm-3 post-container-button reactions-lg">
+            <a class="post-button " href="" data-toggle="modal" data-target="#reaccionar">Reaccionar</a>
+          </div>
+
+          <div class="col-xs-6 col-sm-3 post-container-button no-rborder">
+            <a class="post-button " href="">Comentar</a>
+          </div>
+
+          <!-- Modal -->
+          <div class="modal fade" id="reaccionar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header no-border">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">X</span>
+                  </button>
+                </div>
+                <div class="modal-body state-modal-body">
+                  <div class="row">
+                    <div class="col-xs-12 text-center">
+                      <div class="post-reactionsModal r-blue"> </div>
+                      <div class="post-reactionsModal r-red"> </div>
+                      <div class="post-reactionsModal r-yellow"> </div>
+                      <div class="post-reactionsModal r-green"> </div>
+                      <div class="post-reactionsModal r-black"> </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="modal-footer no-border">
+                  <button type="button" class="btn btn-default state-button state-button-modal" data-dismiss="modal">Agregar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <hr class="line-container " />
+
+        <div class="row">
+          <div class="col-xs-7">
+            <div class="post-reactions r-blue"> </div>
+            <div class="post-reactions r-red"> </div>
+            <div class="post-reactions r-yellow"> </div>
+            <div class="post-reactions r-green"> </div>
+            <div class="post-reactions r-black"> </div>
+            <h5 class="post-reactions-counter"> {{ item.reactions.length }} </h5>
+          </div>
+
+          <div class="col-xs-5 text-right">
+            <span data-toggle="collapse" data-target="#other-comments" aria-expanded="false" aria-controls="collapseExample"> {{ item.comments.length }} comentarios
+            </span>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section>
+    <article *ngFor="let comment of item.comments">
+      <div class="row">
+        <div class="col-xs-2 col-sm-1">
+          <figure>
+            <img class="post-image" src="assets/image/avatar.png" alt="">
+          </figure>
+        </div>
+        <div class="col-xs-10 col-sm-11">
+          <h4 class="post-username">{{comment.user.name}}</h4>
+          <h6 class="post-date">{{comment.date | date}}</h6>
+          <p class="post-content ">
+            {{comment.text}}
+          </p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <form>
+        <div class="form-group">
+          <textarea class="form-control" rows="3" data-toggle="modal" data-target="#comentar" placeholder="Escribe tu comentario"></textarea>
+        </div>
+        <div class="text-right">
+          <button id="comment" type="submit" class="btn btn-default state-button">Comentar</button>
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="comentar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header no-border">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">X</span>
+                </button>
+              </div>
+              <div class="modal-body state-modal-body">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="form-group">
+                      <label class="state-title" for="comment-user" data-toggle="modal" data-target="#comment-share modal-lg">Escribe aquí tu comentario</label>
+                      <textarea id="comment-user" class="form-control state-description" rows="2" data-toggle="modal" data-target="#comentar"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal-footer no-border">
+                <button type="button" class="btn btn-default state-button state-button-modal" data-dismiss="modal">Comentar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>

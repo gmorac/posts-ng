@@ -1,0 +1,41 @@
+/* state */
+.state-button {
+	background: #2ECC71;
+	border-radius: 2px;
+	color: #FFFFFF;
+	font-size: 16px;
+	padding: .5em 2em;
+}
+.state-container {
+	background: #FFFFFF;
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	border-radius: 2px;
+}
+.state-description {
+	resize: none;
+}
+.state-modal-body {
+	padding: 0 15px;
+}
+.state-title {
+	color: #2ECC71;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: .5em;
+}
+
+
+
+@media screen and (max-width: 767px) {
+	.state-button {
+		display: none;
+	}
+	.state-button-modal {
+		display: block;
+		font-size: 18px;
+		padding: 1em 2em;
+		width: 100%;
+	}
+}
+

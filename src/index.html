@@ -1,14 +1,65 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Domiprueba</title>
   <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="author" content="Giovanny Mora" />
+  <meta name="keywords" content="html,css,giovanny,frontend, domicilios" />
+  <meta name="description" content="Prueba técnica frontend developer" />
+  <link rel="stylesheet" href="assets/css/domicilios.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
+  <!-- header -->
+  <header class="header">
+    <div class="container header-container-mdtitle">
+      <div class="row">
+        <div class="col-xs-10 col-sm-9">
+          <h1 class="header-title">Domicilios Test</h1>
+        </div>
+        <div class="col-xs-2 col-sm-3  text-right">
+          <!-- <div class="col-xs-2 "> -->
+          <h4 class="header-user">Hola! Juan</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="container header-container-smtitle">
+      <div class="row">
+        <nav class="navbar navbar-default header-navbar ">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed header-navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <h1 class="header-title">Domicilios Test</h1>
+            </div>
+
+            <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
+              <ul class="nav navbar-nav header-menu">
+                <li>
+                  <a class="header-menu-item" href="#">Hola! Juan </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
   <app-root></app-root>
+
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/bootstrap.js"></script>
 </body>
+
 </html>

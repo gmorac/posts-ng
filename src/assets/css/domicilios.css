@@ -1,0 +1,42 @@
+@import 'bootstrap.css';
+@import 'font-awesome.css';
+@import 'body.css';
+@import 'header.css';
+@import 'state.css';
+@import 'post.css';
+
+
+
+/* utilities classes */
+
+
+
+
+
+
+
+
+
+
+
+
+/* reactions */
+.post-userreactions {
+	background: #F6F6F4;
+}
+.post-userreactions-name {
+	color: #2ECC71;
+	font-size: 12px;	
+}
+.post-userreactions-description {
+	font-size: 12px;
+	color: #000000;
+	mix-blend-mode: normal;
+	opacity: 0.87;
+}
+.post-userreactions-date {
+	font-size: 10px;
+	color: #000000;
+	mix-blend-mode: normal;
+	opacity: 0.38;
+}

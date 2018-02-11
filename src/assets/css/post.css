@@ -1,0 +1,119 @@
+/* post */
+.r-yellow { background: #F5C423;}
+.r-red { background: #F75B60;}
+.r-blue { background: #498BF4}
+.r-green { background: #2ECC71;}
+.r-black { background: #5D5D5D;}
+
+.post-button {
+	color: #2ECC71;
+	font-size: 1.2em;
+}
+.post-container {
+	background: #FFFFFF;
+	border:  1px solid #D7D7D7;
+	border-radius: 2px;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14);
+    margin: 2em 0 0 0;
+}
+.post-date {
+	color: #000000;
+	font-size: 11px;
+	mix-blend-mode: normal;
+	opacity: 0.38;
+}
+.post-image {
+	border-radius: 50%;
+	border: 1px solid #D6D6D6;
+}
+.post-other-comments {
+	background: #F4F4F4;
+}
+.post-reactions {
+	border-radius: 50%;
+	border: 1px solid #FFFFFF;
+	display: inline-block;
+	height: 25px;
+	width: 25px;
+	-webkit-transition: all .5s; 
+    transition: all .5s;
+}
+.post-reactions:hover {
+	border:  0;
+	cursor: pointer;
+	height: 30px;
+	width: 30px;
+}
+.post-reactionsModal {
+	border-radius: 50%;
+	border: 1px solid #FFFFFF;
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	-webkit-transition: all .5s; 
+    transition: all .5s;
+}
+.post-reactionsModal:hover {
+	border:  0;
+	cursor: pointer;
+	height: 55px;
+	width: 55px;
+}
+
+.post-reactions-counter {
+	color: #2ECC71;
+	display: inline-block;
+	font-weight: normal;
+	padding: 0 .5em;
+	vertical-align: super;
+}
+.post-username {
+	color: #2ECC71;
+	font-size: 1.4em;
+}
+
+
+
+@media screen and (max-width: 767px) {
+	.no-lborder {border-left: transparent;}
+	.no-rborder {border-right: none !important;}
+	.tCenter {
+		text-align: center;			
+	}
+	.post-container-button {
+		border:  1px solid #D7D7D7;
+		border-left: 0;
+		padding:  1em;	
+	}
+	.post-reactions {
+		border-radius: 50%;
+		border: 1px solid #FFFFFF;
+		display: inline-block;
+		height: 20px;
+		width: 20px;
+		-webkit-transition: all .5s; 
+	    transition: all .5s;
+	}
+	.post-reactions:hover {
+		border:  0;
+		cursor: pointer;
+		height: 25px;
+		width: 25px;
+	}
+
+	.reactions-mobile {
+		display: none;
+	}
+}
+
+
+@media screen and (min-width: 768px) {
+	.tCenter {
+		margin-left: 7%;
+	}
+	.reactions-lg {
+		display: none;
+	}
+}
+
+

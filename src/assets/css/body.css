@@ -1,0 +1,41 @@
+/* body */
+body {
+	background: #F4F4F4;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+}
+figure {
+	margin-top:  10px;
+}
+section {
+	margin-bottom: 1em;
+}
+textarea {
+	 resize: none;
+}
+
+.container-main {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.line-container {
+	border-top: 1px solid #D7D7D7;
+}
+.no-border {
+	border:  none;
+}
+.margin-container {
+	background: #FFFFFF;
+	border: 1px solid #D7D7D7;
+	border-radius: 2px;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14);
+	margin: 2em 0 0 0;
+	padding: 1em 1.5em;
+}
+
+@media screen and (max-width: 768px) {
+	.line-container {
+		display: none;
+	}
+}
+
