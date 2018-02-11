@@ -1,0 +1,20 @@
+<div *ngIf="!comments">
+  <img src="https://media0.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy-preview.gif">
+</div>
+<div *ngIf="comments">
+  <ul>
+    <li *ngFor="let item of comments">
+      <h3>{{item.user.name}}</h3>
+      <p>{{item.text}}</p>
+      <div>
+        <ul>
+          <li *ngFor="let comment of item.comments">
+            <h4>{{comment.user.name}}</h4>
+            <p>{{comment.text}}</p>
+            <span>{{comment.date | date}}</span>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>
