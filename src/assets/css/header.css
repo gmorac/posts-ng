@@ -3,17 +3,21 @@
 	background: #FFFFFF;
 	border: 1px solid #D7D7D7;
 	padding: 1em;
+	height: 78px;
 }
 .header-title {
 	color: #030303;
-	font-size: 1.6em;
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 28px;
+	margin: 10px 0;
 	text-align: center;
 }
 .header-user {
 	color: #757575;
-	font-size: 1.6em;	
-	margin-top: 20px;
-    margin-bottom: 10px;
+	font-size: 17px;	
+	line-height: 28px;
+	margin: 10px 0;
 }
 
 /* navbar */

@@ -4,23 +4,8 @@
 @import 'header.css';
 @import 'state.css';
 @import 'post.css';
-
-
-
-/* utilities classes */
-
-
-
-
-
-
-
-
-
-
-
-
-/* reactions */
+ 
+/* reactions 
 .post-userreactions {
 	background: #F6F6F4;
 }
@@ -39,4 +24,4 @@
 	color: #000000;
 	mix-blend-mode: normal;
 	opacity: 0.38;
-}
+} */

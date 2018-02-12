@@ -21,7 +21,9 @@
 .state-title {
 	color: #2ECC71;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 16px;
     margin-top: .5em;
 }
 
