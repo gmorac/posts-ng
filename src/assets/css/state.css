@@ -1,9 +1,16 @@
 /* state */
+.line-container-state {
+	border-top: 1px solid #D7D7D7;
+	margin-bottom: 10px;
+}
 .state-button {
 	background: #2ECC71;
 	border-radius: 2px;
 	color: #FFFFFF;
+	font-size: 12px;
 	font-size: 16px;
+	letter-spacing: -0.01px;
+	line-height: 14px;
 	padding: .5em 2em;
 }
 .state-container {
@@ -13,7 +20,14 @@
 	border-radius: 2px;
 }
 .state-description {
+    border: none;
+    display: block;
 	resize: none;
+    width: 100%;
+}
+.state-description-modal {
+	color: #333;
+	box-shadow: none;
 }
 .state-modal-body {
 	padding: 0 15px;
@@ -27,9 +41,10 @@
     margin-top: .5em;
 }
 
-
-
 @media screen and (max-width: 767px) {
+	.line-container-state {
+		display: none;
+	}
 	.state-button {
 		display: none;
 	}

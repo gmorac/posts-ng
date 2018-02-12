@@ -3,22 +3,22 @@ body {
 	background: #F4F4F4;
 	font-size: 14px;
 }
-figure {
-	margin-top:  10px;
-}
-section {
-	margin-bottom: 1em;
-}
 textarea {
 	 resize: none;
 }
 
 .container-main {
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-left: 40px;
+	padding-right: 40px;
 }
-.line-container {
+.figure {
+	border: 1px dashed #D6D6D6;
+	display: inline-block;
+	text-align: center;
+}
+.line-container-states {
 	border-top: 1px solid #D7D7D7;
+	margin-bottom: 10px;
 }
 .no-border {
 	border:  none;
@@ -27,13 +27,24 @@ textarea {
 	background: #FFFFFF;
 	border: 1px solid #D7D7D7;
 	border-radius: 2px;
-	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14);
-	margin: 2em 0 0 0;
-	padding: 1em 1.5em;
+	margin: 2em 0;
+	padding: 1em .5em .5em 1.5em;
+}
+.section-container {
+	border: 1px solid #D7D7D7;
+	border-radius: 2px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14);
+    margin-bottom: 2em;
 }
 
-@media screen and (max-width: 768px) {
-	.line-container {
+@media screen and (min-width: 768px) {
+	.container-main {
+		padding-left: 120px;
+		padding-right: 120px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.line-container-states {
 		display: none;
 	}
 }
