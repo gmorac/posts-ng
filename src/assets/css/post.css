@@ -122,6 +122,9 @@
 .comment-section {
 	padding:  1em;
 }
+.comment-section article:nth-child(odd){
+	margin-bottom: .5em;
+}
 @media screen and (max-width: 767px) {
 	.no-lborder {border-left: transparent;}
 	.no-rborder {border-right: none !important;}
